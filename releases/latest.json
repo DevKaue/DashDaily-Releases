@@ -1,25 +1,26 @@
 {
   "schemaVersion": 1,
-  "version": "1.2.0",
-  "versionCode": 4,
+  "version": "1.2.1",
+  "versionCode": 5,
   "minimumVersion": "1.2.0",
   "mandatory": false,
-  "publishedAt": "2026-09-24T18:22:00.868Z",
-  "title": "Atualizações integradas ao aplicativo",
-  "summary": "O DashDaily agora verifica novas versões, mostra as melhorias e baixa o APK dentro do próprio aplicativo.",
+  "publishedAt": "2026-09-24T20:02:30.528Z",
+  "title": "Navegação responsiva e dashboard confiável",
+  "summary": "A interface mobile foi reorganizada para funcionar com clareza em aparelhos Motorola, outros Androids, iPhone e telas maiores.",
   "improvements": [
-    "Verificação automática de novas versões ao abrir ou retornar ao aplicativo.",
-    "Tela com descrição completa das melhorias antes da instalação.",
-    "Download do APK com acompanhamento de progresso dentro do DashDaily.",
-    "Abertura automática do instalador seguro do Android.",
-    "Canal oficial de releases separado, com histórico e checksum dos APKs.",
-    "Assinatura Android de produção persistente para proteger as próximas atualizações."
+    "Barra inferior reduzida a cinco destinos principais, com áreas de toque legíveis.",
+    "Nova tela Mais organiza cartões, investimentos, relatórios, insights, notificações, perfil e assinatura.",
+    "Safe areas e altura do menu adaptadas à navegação do Android e à área inferior do iPhone.",
+    "Grade responsiva que varia entre uma, duas ou três colunas conforme a largura disponível.",
+    "Dashboard sem transações fictícias e com estados reais de carregamento, erro e conta vazia.",
+    "Ações rápidas para registrar transações, planejar o mês e consultar notificações.",
+    "Cabeçalhos, formulários e painéis inferiores adaptados a telas estreitas e tablets."
   ],
   "android": {
     "packageName": "com.dashdaily.app",
-    "downloadUrl": "https://github.com/DevKaue/DashDaily-Releases/releases/download/v1.2.0/dashdaily-mobile-1.2.0-android.apk",
-    "sha256": "4d5fe526cb7ac357911bf9f1f3e37e2b0bf1653bc9561c5b946914be0d54c891",
-    "sizeBytes": 106685121
+    "downloadUrl": "https://github.com/DevKaue/DashDaily-Releases/releases/download/v1.2.1/dashdaily-mobile-1.2.1-android.apk",
+    "sha256": "aafb75959a990efb6110be10bad1f4687b6f5d7208b4ce54cf838e82198e5785",
+    "sizeBytes": 106692001
   },
-  "releaseNotesUrl": "https://github.com/DevKaue/DashDaily-Releases/blob/main/releases/1.2.0.md"
+  "releaseNotesUrl": "https://github.com/DevKaue/DashDaily-Releases/blob/main/releases/1.2.1.md"
 }
