@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "version": "1.1.1",
+  "versionCode": 3,
+  "minimumVersion": "1.1.1",
+  "mandatory": false,
+  "publishedAt": "2026-09-23T22:57:12-03:00",
+  "title": "Autenticação mais estável e segura",
+  "summary": "Correções de autenticação, disponibilidade e proteção dos ambientes Web e Mobile.",
+  "improvements": [
+    "Aquecimento preventivo da API antes do login e do cadastro.",
+    "Mensagens mais claras quando o servidor estiver iniciando ou indisponível.",
+    "Validação e normalização mais rigorosas dos dados de autenticação.",
+    "Restrição de acesso da API exclusivamente às origens oficiais."
+  ],
+  "android": {
+    "packageName": "com.dashdaily.app",
+    "downloadUrl": "https://github.com/DevKaue/DashDaily-Releases/releases/download/v1.1.1/dashdaily-mobile-1.1.1-android.apk",
+    "sha256": "58832ac3e2c0565cc845e4cf7cde22e8e1a81087cdde2cf5251e9523d36522d7",
+    "sizeBytes": 106653453
+  },
+  "releaseNotesUrl": "https://github.com/DevKaue/DashDaily-Releases/blob/main/releases/1.1.1.md"
+}
