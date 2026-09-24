@@ -365,7 +365,12 @@ def build_guide(catalog: dict, output_path: Path) -> None:
     # Dashboard
     next_page(pdf)
     y = draw_header(pdf, "Visão geral", "02", version, 4)
-    y = draw_title(pdf, "Entenda o dashboard", "Use o painel como fotografia do período e como ponto de partida para agir.", y)
+    y = draw_title(
+        pdf,
+        "Entenda o dashboard",
+        "Use o painel como fotografia do período. No celular, navegue por Início, Transações, Orçamento, Metas e Mais.",
+        y,
+    )
     y = draw_two_cards(pdf, [
         ("Saldo", "Receitas menos despesas no período. Resultado negativo exige revisão."),
         ("Receitas", "Total de salário, renda extra, reembolsos e outras entradas."),

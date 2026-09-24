@@ -57,9 +57,10 @@ jobs:
           assert len(reader.pages) == 13, f"Quantidade inesperada de páginas: {len(reader.pages)}"
           assert reader.metadata.title == f"Guia de Utilização DashDaily {version}"
           text = "\n".join(page.extract_text() or "" for page in reader.pages)
-          assert f"versão {version}" in text.lower()
-          assert "Atualizações integradas ao aplicativo" in text
-          assert "DevKaue/DashDaily-Releases" in text
+          normalized_text = " ".join(text.split())
+          assert f"versão {version}" in normalized_text.lower()
+          assert "Atualizações integradas ao aplicativo" in normalized_text
+          assert "DevKaue/DashDaily-Releases" in normalized_text
           print(f"PDF {version} validado: {len(reader.pages)} páginas")
           PY
 
