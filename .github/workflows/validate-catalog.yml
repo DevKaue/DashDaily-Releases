@@ -1,0 +1,27 @@
+name: Validar catálogo de atualizações
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "releases/**"
+      - "scripts/validate-catalog.mjs"
+      - ".github/workflows/validate-catalog.yml"
+  pull_request:
+    paths:
+      - "releases/**"
+      - "scripts/validate-catalog.mjs"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Validate update catalog
+        run: node scripts/validate-catalog.mjs

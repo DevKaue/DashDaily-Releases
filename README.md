@@ -16,10 +16,19 @@ O Android exige uma confirmação antes de instalar ou substituir um APK. Essa c
 
 ## Publicação de uma nova versão
 
-1. Gere e teste o APK no repositório principal.
-2. Crie a release com a tag correspondente, por exemplo `v1.2.0`.
-3. Anexe o APK e informe seu SHA-256.
-4. Adicione as notas em `releases/1.2.0.md`.
-5. Atualize `releases/latest.json` somente depois que o APK estiver disponível.
+O build permanece no repositório privado do produto. O repositório público recebe somente o APK aprovado, as notas e o checksum — nunca o código-fonte ou uma credencial com acesso a ele.
+
+Depois de gerar e testar o APK no projeto principal, execute o publicador local:
+
+```bash
+node scripts/publish-local.mjs \
+  --version 1.2.0 \
+  --version-code 4 \
+  --apk /caminho/dashdaily-mobile-1.2.0-android.apk \
+  --notes /caminho/1.2.0.json \
+  --mandatory false
+```
+
+O comando calcula o SHA-256, gera as notas, cria a release imutável e, por último, publica o catálogo `latest.json`. O workflow deste repositório valida o catálogo a cada alteração.
 
 Nunca substitua o arquivo de uma versão existente. Publique uma nova versão para preservar rastreabilidade e permitir auditoria do checksum.
