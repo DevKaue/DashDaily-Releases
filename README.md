@@ -12,6 +12,7 @@ O Android exige uma confirmação antes de instalar ou substituir um APK. Essa c
 
 - `releases/latest.json`: catálogo da versão atual consumido pelo aplicativo.
 - `releases/<versão>.md`: descrição completa das melhorias de cada versão.
+- `scripts/generate-guide.py`: gerador do guia oficial em PDF com dados da release atual.
 - GitHub Releases: APKs assinados e checksums para validação.
 
 ## Publicação de uma nova versão
@@ -30,5 +31,7 @@ node scripts/publish-local.mjs \
 ```
 
 O comando calcula o SHA-256, gera as notas, cria a release imutável e, por último, publica o catálogo `latest.json`. O workflow deste repositório valida o catálogo a cada alteração.
+
+Depois que o catálogo é atualizado, o workflow `Publicar guia em PDF` gera automaticamente um novo guia com a versão, melhorias, checksum e instruções atuais, valida suas 13 páginas e anexa o PDF à mesma release.
 
 Nunca substitua o arquivo de uma versão existente. Publique uma nova versão para preservar rastreabilidade e permitir auditoria do checksum.
